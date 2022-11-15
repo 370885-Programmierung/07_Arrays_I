@@ -23,25 +23,44 @@ function getSentence(word1,word2,word3,word4,word5,word6,) {
 
 
 /*** 01. Funktionalität mit Array */
-// output (getSentenceArr(["Ich", "bin", "der", "coole", "Max", "Mütze"]));
+output (getSentenceArr(["Ich", "bin", "der", "coole", "Max", "Mütze","und","gehe","gern","ins","Kino"]));
 function getSentenceArr(arr) {
     const Gap = " ";
-    const Punct = ".";
-    let str =   arr[0] + Gap +
-                arr[1] + Gap +
-                arr[2] + Gap +
-                arr[3] + Gap +
-                arr[4] + Gap +
-                arr[5] +
-            Punct;
+    // const Punct = ".";
+    let str="";
+    // die eleganteste Variante
+    for (let i = 0; i < arr.length; i++) {
+        str = str + arr[i] + Gap; }
+    return str.trim() + ".";
+
+    // die etwas aufwändigere Variante
+    // for (let i = 0; i < arr.length-1; i++) {
+    //     str = str + arr[i] + Gap; }
+    // return str + arr[arr.length] + ".";
+
+    // die übliche Variante
+    // for (let i = 0; i < arr.length; i++) {
+    //     if (i < arr.length-1) {
+    //         str = str + arr[i] + Gap;
+    //     } else {
+    //         str = str + arr[i] + "."
+    //     }
+    //      }
+
+     // die übliche Variante mit logischem Ausdruck
+    // for (let i = 0; i != arr.length; i++) {
+
+    //     if (i < arr.length-1) {
+    //         str = str + arr[i] + Gap;
+    //     } else {
+    //         str = str + arr[i] + "."
+    //     }
+    //      }
+
     return str;
 }
 
-for (let i = 1; i < 10; i+2) {
-    output("index i = " + i);  
-}
-
-// for (let i = 0; i <arr.length>; i--) {
+// for (let i = 0; i < arr.length; i++) {
 //     output(arr[1] + Gap +);  
 // }
 
@@ -63,3 +82,8 @@ function output(outputStr) {
 // output (arr.length);
 // output (arr[0]); // Konkrete Ausgabe eines Index. Index eines Arrays beginnt bei 0 und gibt damit den ersten Wert aus
 // output (arr[arr.length-1]); // Allgemeine Form den z.B. letzten Wert eines Arrays auszugeben
+
+// let arr =  [true, false,2,3,4,5,"Ich", "bin", "der", "coole", "Max", "Mütze" ];
+// for (let i = 0; i < arr.length; i++) {
+//     output(arr[i]);  
+// }
