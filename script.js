@@ -9,8 +9,6 @@ console.log(testArr[testArr.length-1])
 var struc ={
     level1:
     {   
-
- 
         level2:
         {
         param1: 3.14,
